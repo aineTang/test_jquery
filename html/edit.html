@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑表单界面</title>
+    <link rel="stylesheet" href="../libs/jquery/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../css/edit.css" />
+</head>
+<body>
+    <div class="outer-wrapper"></div>
+    <!--编辑界面-->
+    <script id="editTemplate" type="text/html">
+        <span class="edit-button" onclick="changeTemplate('preview')">预览</span>
+        <div class="controls-wrapper">
+        </div>
+        <span class="common-button add-button" onclick="popDialog()">+</span>
+        <!--弹出框-->
+        <div class="popup-dialog">
+            <div class="tip-text">请选择需要添加的表单元素：</div>
+            <form id="selectList" method="post">
+                <input type="radio" name="formElement" checked value="文本" class="radio-input">文本
+                <br />
+                <input type="radio" name="formElement" value="日期" class="radio-input">日期
+                <br />
+                <input type="button" class="edit-button" value="选择" onclick="addItem()" />
+            </form>
+        </div>
+    </script>
+
+    <!--预览界面-->
+    <script id="previewTemplate" type="text/html">
+        <span class="edit-button" onclick="changeTemplate('edit')">编辑</span>
+        <form id="previewForm" method="post">
+            <div class="controls-wrapper"></div>
+            <input type="button" value="提交" class="edit-button" />
+        </form>
+    </script>
+
+    <script src="../libs/jquery/jquery-3.0.0.min.js"></script>
+    <script src="../libs/jquery/jquery-ui.min.js"></script>
+    <script src="../js/edit.js"></script>
+</body>
+</html>
