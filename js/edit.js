@@ -8,7 +8,6 @@ var elementObject = {
     status:"edit",
     items:[]
 };
-// var elementCollect = elementCollect?elementCollect:[];
 /**
  * 弹出弹出框
  */
